@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--container-color);
+    background-color: var(--body-color);
 }
 
 .nav {
@@ -26,7 +26,24 @@
     column-gap: 2rem;
 }
 
+.nav_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+.nav_icon,
 .nav_close,
 .nav-toggle {
     display: none;
+}
+
+/* Active link */
+.active-link,
+.nav_link:hover {
+   color: var(--title-color-dark)
 }
